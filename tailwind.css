@@ -1,0 +1,436 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth overscroll-y-contain;
+}
+.footer {
+  @apply bg-[#212529] text-white px-0 py-5;
+  font-family: Arial, sans-serif;
+}
+.footer-container {
+  @apply flex justify-around max-w-[1200px] mx-auto my-0 px-5 py-0;
+}
+.footer-column {
+  @apply flex-1;
+}
+.footer-column h3 {
+  @apply text-base mb-[15px];
+}
+.footer-column ul {
+  @apply p-0;
+  list-style: none;
+}
+.footer-column ul li {
+  @apply mb-2.5;
+}
+.footer-column ul li a {
+  @apply text-white no-underline hover:underline;
+}
+.footer-logo {
+  @apply text-lg mb-[15px];
+}
+.footer-social {
+  @apply flex gap-2.5 mt-2.5;
+}
+.footer-social a {
+  @apply text-white no-underline;
+}
+.footer-bottom {
+  @apply text-center bg-[#181a1b] text-sm px-0 py-2.5;
+}
+.custom-container {
+  @apply bg-[#f9f9f9];
+  font-family: Arial, sans-serif;
+}
+.custom-container .services {
+  @apply flex justify-around bg-white p-5;
+}
+.custom-container .service {
+  @apply text-center shadow-[0_2px_4px_rgba(0,0,0,0.1)] bg-white p-5 rounded-[10px];
+}
+.custom-container .service .icon {
+  @apply text-[40px] mb-2.5;
+}
+.custom-container .service h3 {
+  @apply text-[#333333];
+}
+.custom-container .service p {
+  @apply text-[#777777];
+}
+body {
+  @apply overflow-y-scroll overscroll-none m-0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  @apply fixed w-full bg-[#0d0d0d] overflow-hidden flex justify-between items-center z-[1000] px-5 py-2.5;
+}
+.navbar .logo {
+  @apply text-[black] text-2xl font-[bold] no-underline;
+}
+.navbar .nav-links {
+  @apply flex m-0 p-0;
+  list-style: none;
+}
+.navbar .nav-links li {
+  @apply mx-[15px] my-0;
+}
+.navbar .nav-links a {
+  @apply text-[white] no-underline text-base;
+}
+.home-section {
+  @apply bg-cover text-[black] text-center relative px-0 py-[150px] before:content-[""] before:absolute before:w-full before:h-full before:bg-[rgba(0,0,0,0.65)] before:left-0 before:top-0;
+  background: url("images/Background2.jpg") no-repeat center center;
+}
+.home-section h1 {
+  @apply text-5xl font-bold relative z-[1] text-[white] text-center mb-5;
+}
+.home-section p {
+  @apply text-lg max-w-[600px] relative z-[1] text-[white] text-center mt-0 mb-[30px] mx-auto;
+}
+.home-section .btn {
+  @apply bg-[#00cc99] text-[black] no-underline text-base inline-block relative z-[1] text-[white] text-center px-[30px] py-[15px] rounded-[5px] border-[none];
+}
+.services-container {
+  @apply text-center p-[50px];
+  font-family: Arial, sans-serif;
+}
+.services-title {
+  @apply text-4xl mb-2.5;
+}
+.services-subtitle {
+  @apply text-lg text-[gray] mb-[50px];
+}
+.services-grid {
+  @apply flex justify-around;
+}
+.service-item {
+  @apply w-[30%] text-center;
+}
+.service-item img {
+  @apply w-20 mb-5;
+}
+.service-item h3 {
+  @apply text-2xl mb-2.5;
+}
+.service-item p {
+  @apply text-[gray] text-sm;
+}
+.custom-container .process {
+  @apply bg-white text-center px-5 py-10;
+}
+.custom-container .process h2 {
+  @apply text-[#333333];
+}
+.custom-container .process p {
+  @apply text-[#777777] max-w-[600px] mt-0 mb-10 mx-auto;
+}
+.custom-container .steps {
+  @apply flex justify-around;
+}
+.custom-container .step {
+  @apply text-center bg-[#f0f4f8] max-w-[200px] p-5 rounded-[10px];
+}
+.custom-container .step-number {
+  @apply text-2xl text-[#00bfa6] mb-2.5;
+}
+.custom-container .step h4 {
+  @apply text-[#333333];
+}
+.custom-container .step p {
+  @apply text-[#777777];
+}
+.carousel-section {
+  @apply bg-white text-center relative w-full py-5;
+}
+.carousel-section h2 {
+  @apply text-2xl mb-2.5;
+}
+.carousel-section p {
+  @apply text-[#7d8ea2] text-base max-w-[800px] mb-[30px] mx-auto my-0;
+}
+.carousel-section .carousel-images {
+  @apply flex justify-center relative mb-5;
+}
+.carousel-section .carousel-images .carousel-image {
+  @apply overflow-hidden w-[60px] h-[60px] transition-opacity duration-[0.3s] ease-[ease-in-out] mx-2.5 my-0 rounded-[50%];
+}
+.carousel-section .carousel-images .carousel-image img {
+  @apply w-full h-full object-cover;
+}
+.carousel-section .carousel-images .carousel-image.inactive {
+  @apply opacity-50;
+}
+.carousel-section .carousel-review {
+  @apply text-lg text-[#333] leading-[1.6] mb-[30px];
+}
+.carousel-section .carousel-review::before,
+.carousel-section .carousel-review::after {
+  @apply content-['"'] text-[#00bfa6] text-2xl align-top;
+}
+.carousel-section .review-author {
+  @apply font-[bold] text-xl mb-[5px];
+}
+.carousel-section .review-author-title {
+  @apply text-base text-[#7d8ea2];
+}
+.carousel-section .carousel-arrows {
+  @apply absolute -translate-y-2/4 w-full flex justify-between top-2/4;
+}
+.carousel-section .carousel-arrow {
+  @apply cursor-pointer text-black text-2xl transition-[color] duration-[0.3s] ease-[ease-in-out] bg-transparent rounded-[50%] border-[none] hover:text-[#333] disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.team-container {
+  @apply text-center p-[50px];
+  font-family: Arial, sans-serif;
+}
+.team-title {
+  @apply text-4xl mb-2.5;
+}
+.team-subtitle {
+  @apply text-lg text-[gray] mb-[50px];
+}
+.team-grid {
+  @apply flex justify-around;
+}
+.team-member {
+  @apply w-1/5 text-center;
+}
+.team-member img {
+  @apply w-full h-3/6 object-cover mb-5 rounded-[50%];
+}
+.team-member h3 {
+  @apply text-xl mb-[5px];
+}
+.team-member p {
+  @apply text-[gray] text-sm;
+}
+.portfolio-section {
+  @apply text-center px-0 py-[50px];
+  background: white;
+}
+.portfolio-section h2 {
+  @apply text-[32px] font-bold mb-5;
+}
+.portfolio-section p {
+  @apply text-base text-[#666] max-w-[800px] mb-10 mx-auto my-0;
+}
+.portfolio-section .filter {
+  @apply inline-block mb-[30px];
+}
+.portfolio-section .filter button {
+  @apply border text-[#00cc99] cursor-pointer transition-[background-color] duration-[0.3s,color] delay-[0.3s] mx-2.5 my-0 px-5 py-2.5 border-solid border-[#00cc99];
+  background: none;
+}
+.portfolio-section .filter button.active,
+.portfolio-section .filter button:hover {
+  @apply text-[white];
+  background: #00cc99;
+}
+.portfolio-section .portfolio-items {
+  @apply flex justify-center flex-wrap;
+}
+.portfolio-section .portfolio-items .item {
+  @apply w-[calc(25%_-_20px)] border overflow-hidden transition-transform duration-[0.3s,box-shadow] delay-[0.3s] m-2.5 rounded-[10px] border-solid border-[#eee] hover:shadow-[0_4px_8px_rgba(0,0,0,0.1)] hover:scale-105;
+}
+.portfolio-section .portfolio-items .item img {
+  @apply w-[300px] h-[200px] flex object-cover;
+}
+.plans-container {
+  @apply text-center p-[50px];
+  font-family: Arial, sans-serif;
+}
+.plans-title {
+  @apply text-4xl mb-2.5;
+}
+.plans-subtitle {
+  @apply text-lg text-[gray] mb-[50px];
+}
+.plans-grid {
+  @apply flex justify-around;
+}
+.plan-item {
+  @apply w-[30%] text-center border shadow-[0_0_10px_rgba(0,0,0,0.1)] p-5 rounded-[5px] border-solid border-[#ddd];
+}
+.plan-item h3 {
+  @apply text-2xl mb-2.5;
+}
+.plan-item .price {
+  @apply text-4xl text-[#33c3f0] mb-5;
+}
+.plan-item p {
+  @apply text-[gray] text-sm mb-2.5;
+}
+.page1-container {
+  @apply text-center p-5;
+  font-family: Arial, sans-serif;
+}
+.page1-header {
+  @apply text-2xl mb-2.5;
+}
+.page1-subheader {
+  @apply text-[#666] mb-5;
+}
+.page1-articles {
+  @apply flex justify-around gap-5;
+}
+.page1-article {
+  @apply shadow-[0_2px_4px_rgba(0,0,0,0.1)] w-[30%] p-5 rounded-lg;
+  background: #fff;
+}
+.page1-article img {
+  @apply w-full h-[250px] rounded-[8px_8px_0_0];
+}
+.page1-article h3 {
+  @apply text-lg mt-2.5;
+}
+.page1-article p {
+  @apply text-[#777];
+}
+.page3-container {
+  @apply text-center px-5 py-[50px];
+  font-family: Arial, sans-serif;
+}
+.page3-header {
+  @apply text-2xl mb-2.5;
+}
+.page3-subheader {
+  @apply text-[#666] mb-5;
+}
+.page3-contact-details {
+  @apply flex justify-around flex-wrap;
+}
+.page3-contact-item {
+  @apply text-left m-5;
+}
+.page3-contact-item h4 {
+  @apply mb-2.5;
+}
+.page3-contact-item p {
+  @apply m-0;
+}
+.page2-container {
+  @apply text-center bg-[#e0f7ea] px-5 py-[50px];
+  font-family: Arial, sans-serif;
+}
+.page2-header {
+  @apply text-2xl mb-2.5;
+}
+.page2-subheader {
+  @apply text-[#666] mb-5;
+}
+.page2-button {
+  @apply bg-[#00b894] text-white text-base cursor-pointer no-underline px-5 py-2.5 rounded-[5px] border-[none];
+}
+.page2-illustration {
+  @apply flex justify-between mt-5;
+}
+.custom-form {
+  @apply max-w-[85%] mx-auto my-0 p-5 rounded-[5px];
+}
+.custom-form input,
+.custom-form textarea {
+  @apply w-[calc(100%_-_20px)] border box-border mb-2.5 p-2.5 rounded-[5px] border-solid border-[#ccc];
+}
+.custom-form .row {
+  @apply flex justify-between;
+}
+.custom-form .row input[type="email"],
+.custom-form .row input[type="number"] {
+  @apply w-[calc(100%_-_20px)] mb-2.5;
+}
+.custom-form textarea {
+  @apply w-[calc(100%_-_20px)] h-[100px];
+}
+.custom-form label {
+  @apply block mb-[5px];
+}
+.custom-form button {
+  @apply bg-[#00b300] text-[white] cursor-pointer px-5 py-2.5 rounded-[5px] border-[none] hover:bg-[#009900];
+}
+.agency-section {
+  @apply flex items-center bg-white shadow-[0_4px_8px_rgba(0,0,0,0.1)] max-w-[900px] mx-auto my-0 p-5 rounded-[10px];
+}
+.agency-info {
+  @apply flex-1 pr-5;
+}
+.agency-info h3 {
+  @apply text-sm text-[#7d8ea2] mb-[5px];
+}
+.agency-info h2 {
+  @apply text-2xl mb-2.5;
+}
+.agency-info p {
+  @apply text-[#7d8ea2] text-sm mb-5;
+}
+.progress-bar {
+  @apply mb-2.5;
+}
+.progress-bar label {
+  @apply flex justify-between text-base mb-[5px];
+}
+.progress {
+  @apply bg-[#e0e0e0] overflow-hidden h-2.5 rounded-[10px];
+}
+.progress-inner {
+  @apply h-2.5 bg-[#00bfa6] rounded-[10px];
+}
+.progress-inner.web-design {
+  @apply w-4/5;
+}
+.progress-inner.development {
+  @apply w-3/5;
+}
+.progress-inner.branding {
+  @apply w-2/5;
+}
+.progress-inner.code {
+  @apply w-9/12;
+}
+.agency-image {
+  @apply flex-1;
+}
+.agency-image img {
+  @apply w-full rounded-[10px];
+}
+.achievements-section {
+  @apply flex justify-between items-center bg-[#f9f9f9] p-5;
+  font-family: Arial, sans-serif;
+}
+.achievements-content {
+  @apply max-w-[50%];
+}
+.achievements-content h2 {
+  @apply text-2xl mb-2.5;
+}
+.achievements-content p {
+  @apply text-[#666] leading-normal mb-5;
+}
+.achievements-stats {
+  @apply flex gap-5;
+}
+.stat {
+  @apply flex flex-col items-center bg-[white] shadow-[0_2px_4px_rgba(0,0,0,0.1)] text-center p-5 rounded-lg;
+}
+.stat-icon {
+  @apply text-2xl text-[#34c759] mb-2.5;
+}
+.stat-value {
+  @apply text-xl font-[bold] mb-[5px];
+}
+.stat-label {
+  @apply text-[#888];
+}
+.achievements-image {
+  @apply max-w-[45%] overflow-hidden rounded-lg;
+}
+.achievements-image img {
+  @apply w-full h-auto block;
+}
+.navbar-left img {
+  @apply h-[30px] w-[100px] object-cover;
+}
+.navbar-left {
+  @apply flex items-center;
+}
